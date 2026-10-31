@@ -1,0 +1,297 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color" content="#182019">
+
+    <title>HForked — Horizon, with more freedom</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="background-art">
+        <div class="sun"></div>
+        <div class="mountains mountain-back"></div>
+        <div class="mountains mountain-front"></div>
+        <div class="ground"></div>
+    </div>
+
+    <header class="topbar">
+        <a class="brand" href="#">
+            <span class="brand-cube">H</span>
+            <span>HFORKED</span>
+        </a>
+
+        <nav class="top-actions">
+            <a href="#about" data-i18n="navAbout">About</a>
+            <a href="#installation" data-i18n="navInstallation">Installation</a>
+            <a href="#whats-new" data-i18n="navWhatsNew">What's New</a>
+            <a href="#support" data-i18n="navSupport">Support</a>
+            <a href="#credits" data-i18n="navCredits">Credits</a>
+
+            <button class="language-button" id="languageButton">
+                <span id="currentLanguage">EN</span>
+                <span class="arrow"></span>
+            </button>
+        </nav>
+    </header>
+
+    <main>
+        <section class="hero">
+            <div class="hero-layout">
+                <div class="hero-copy">
+                    <div class="release-label">
+                        <span class="status-dot"></span>
+                        <span data-i18n="heroLabel">A COMMUNITY FORK OF HORIZON</span>
+                    </div>
+
+                    <h1>HFORKED</h1>
+
+                    <div class="hero-subtitle" data-i18n="tagline">
+                        HORIZON, WITH MORE FREEDOM.
+                    </div>
+
+                    <p class="hero-description" data-i18n="intro">
+                        An independent community fork of the Horizon launcher, with its own identity, installation guide and user support.
+                    </p>
+
+                    <div class="quick-links">
+                        <a href="https://github.com/HForked/HForked" target="_blank" rel="noopener noreferrer">
+                            <span data-i18n="source">Source Code</span>
+                            <span class="external-arrow"></span>
+                        </a>
+
+                        <a href="https://github.com/HForked/HForked/releases" target="_blank" rel="noopener noreferrer">
+                            <span data-i18n="releases">Releases</span>
+                            <span class="external-arrow"></span>
+                        </a>
+                    </div>
+                </div>
+
+                <aside class="download-panel" aria-label="HForked download">
+                    <div class="download-copy">
+                        <span class="download-kicker" data-i18n="getStarted">GET STARTED</span>
+                        <strong data-i18n="downloadTitle">Get HForked</strong>
+                        <small data-i18n="downloadDescription">Download the launcher and start playing.</small>
+                        <span class="download-platform" data-i18n="downloadPlatform">WINDOWS x64 · ZIP ARCHIVE</span>
+                    </div>
+
+                    <a class="download-button" href="https://github.com/HForked/HForked/releases/latest/download/hforked-launcher.zip" aria-label="Download hforked-launcher.zip">
+                        <span class="download-arrow"></span>
+                        <span data-i18n="downloadButton">DOWNLOAD</span>
+                    </a>
+
+                    <div class="download-note" data-i18n="downloadNote">
+                        Direct download of hforked-launcher.zip from the latest GitHub release.
+                    </div>
+                </aside>
+            </div>
+        </section>
+
+        <div class="content-layout">
+            <div class="content-main">
+                <section class="content-card" id="about">
+
+            <div class="section-label">
+                <span class="section-line"></span>
+                <span data-i18n="aboutLabel">ABOUT THE PROJECT</span>
+            </div>
+
+            <h2 data-i18n="aboutTitle">A familiar base. A community-built launcher.</h2>
+
+            <p data-i18n="aboutText">
+                HForked is an independent community fork of the Horizon launcher. It keeps Horizon as its foundation and currently supports local Offline profiles.
+            </p>
+
+            <div class="feature-row">
+                <div class="feature">
+                    <span class="feature-symbol offline-symbol">O</span>
+                    <div>
+                        <strong data-i18n="offlineTitle">Offline profiles</strong>
+                        <small data-i18n="offlineCaption">Create and use a local player profile</small>
+                    </div>
+                </div>
+
+                <div class="feature">
+                    <span class="feature-symbol horizon-symbol">H</span>
+                    <div>
+                        <strong>Horizon</strong>
+                        <small data-i18n="horizonCaption">Built on the original open-source project</small>
+                    </div>
+                </div>
+            </div>
+
+        </section>
+
+        <section class="content-card release-section" id="whats-new" aria-labelledby="whatsNewHeading">
+
+            <div class="section-label">
+                <span class="section-line"></span>
+                <span data-i18n="whatsNewLabel">LATEST UPDATES</span>
+            </div>
+
+            <div class="release-section-heading">
+                <div>
+                    <h2 id="whatsNewHeading" data-i18n="whatsNewTitle">What's new</h2>
+                    <p data-i18n="whatsNewIntro">Release notes are loaded directly from GitHub.</p>
+                </div>
+                <a class="release-all-link" href="https://github.com/HForked/HForked/releases" target="_blank" rel="noopener noreferrer">
+                    <span data-i18n="viewAllReleases">ALL RELEASES</span>
+                    <span class="external-arrow"></span>
+                </a>
+            </div>
+
+            <div id="latestRelease" class="release-latest" aria-live="polite">
+                <div class="release-loading" data-i18n="loadingReleases">Loading releases from GitHub...</div>
+            </div>
+
+            <div id="olderReleasesSection" class="older-releases-section" hidden>
+                <div class="older-releases-heading" data-i18n="olderReleases">OLDER RELEASES</div>
+                <div id="olderReleases" class="older-releases-list"></div>
+            </div>
+
+            <p id="firstReleaseNote" class="first-release-note" data-i18n="firstReleaseNote" hidden>
+                This is the first published HForked release.
+            </p>
+
+        </section>
+
+        <section class="content-card" id="installation">
+
+            <div class="section-label">
+                <span class="section-line"></span>
+                <span data-i18n="installationLabel">INSTALLATION</span>
+            </div>
+
+            <h2 data-i18n="installationTitle">Get started with HForked.</h2>
+
+            <p data-i18n="installationIntro">
+                Follow these steps to install the launcher and prepare Minecraft 26.3.
+            </p>
+
+            <ol class="install-steps">
+                <li data-i18n="installStep1">Download the hforked-launcher.zip archive.</li>
+                <li data-i18n="installStep2">Open the archive using an archiver such as 7-Zip or WinRAR.</li>
+                <li data-i18n="installStep3">Extract HForked Launcher.exe to a convenient location, such as your Desktop.</li>
+                <li data-i18n="installStep4">Extract the Minecraft 26.3 folder from the archive to a preferred location on your computer.</li>
+                <li data-i18n="installStep5">Launch the application by running HForked Launcher.exe.</li>
+                <li data-i18n="installStep6">Open account management in the top-right corner. The default profile is player. To change it, select Manage accounts, enter your desired username in Offline name, and click Add. The new profile will be selected automatically.</li>
+                <li data-i18n="installStep7">Open Versions at the top, select version 0.2.0 or newer, and wait for the download to finish.</li>
+                <li data-i18n="installStep8">Return to Home. Under Minecraft Folder, click Choose and select the location of your 26.3 folder.</li>
+                <li data-i18n="installStep9">Above Minecraft Folder, find Resources and click Prepare.</li>
+                <li data-i18n="installStep10">Wait until all four preparation steps finish, then click Play.</li>
+            </ol>
+
+                </section>
+            </div>
+
+            <aside class="content-side">
+                <section class="content-card support-card" id="support">
+
+            <div class="section-label">
+                <span class="section-line"></span>
+                <span data-i18n="supportLabel">NEED HELP?</span>
+            </div>
+
+            <div class="support-panel">
+                <div class="support-copy">
+                    <h2 data-i18n="supportTitle">Found a problem?</h2>
+                    <p data-i18n="supportText">Send a report to the HForked team. You can include a description, screenshot or video.</p>
+                </div>
+                <a class="support-button" href="https://t.me/hforkedreports_bot" target="_blank" rel="noopener noreferrer">
+                    <span data-i18n="supportButton">OPEN REPORTS BOT</span>
+                    <span class="external-arrow"></span>
+                </a>
+            </div>
+
+        </section>
+
+        <section class="content-card" id="credits">
+
+            <div class="section-label">
+                <span class="section-line"></span>
+                <span data-i18n="creditsLabel">CREDITS</span>
+            </div>
+
+            <h2 data-i18n="creditsTitle">
+                Built on the work of others.
+            </h2>
+
+            <p data-i18n="creditsText">
+                HForked is based on Horizon, an open-source project created by Ludovic Marie.
+            </p>
+
+            <div class="credit-bottom">
+                <div>
+                    <strong>Horizon</strong>
+                    <small data-i18n="licenseText">Original project — MIT License</small>
+                </div>
+
+                <a href="https://github.com/horizon-rust/horizon" target="_blank" rel="noopener noreferrer">
+                    <span data-i18n="viewOriginal">VIEW ORIGINAL PROJECT</span>
+                    <span class="external-arrow"></span>
+                </a>
+            </div>
+
+            <p class="disclaimer" data-i18n="disclaimer">
+                HForked is an independent community fork and is not affiliated with or endorsed by the original Horizon developers.
+            </p>
+
+                </section>
+            </aside>
+        </div>
+    </main>
+
+    <footer class="footer">
+        <span>© 2026 HForked</span>
+        <span data-i18n="footerText">An independent Horizon launcher fork.</span>
+    </footer>
+
+    <div class="modal-backdrop" id="languageModal" hidden>
+        <div class="language-modal">
+
+            <button class="modal-close" id="closeModal" aria-label="Close">×</button>
+
+            <div class="modal-cube">H</div>
+
+            <div class="modal-kicker" data-i18n="welcome">WELCOME TO</div>
+
+            <h2>HFORKED</h2>
+
+            <p data-i18n="chooseLanguage">Choose your language</p>
+
+            <div class="language-options">
+                <button data-language="en">
+                    <span>English</span>
+                    <b>EN</b>
+                </button>
+
+                <button data-language="ru">
+                    <span>Русский</span>
+                    <b>RU</b>
+                </button>
+
+                <button data-language="ua">
+                    <span>Українська</span>
+                    <b>UA</b>
+                </button>
+            </div>
+
+            <small class="modal-hint" data-i18n="languageHint">
+                You can change this later in the top-right corner.
+            </small>
+
+        </div>
+    </div>
+
+
+    <script src="script.js"></script>
+</body>
+</html>
